@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue如何实现双向数据绑定</title>
+</head>
+
+<body>
+    <input type="text" name="" id="USERNAME">
+    <br>
+    <span id="uname"></span>
+    <script>
+        var obj = {};
+        Object.defineProperty(obj, 'username', {
+            get: function() { //获取值时触发的函数
+                console.log('get')
+            },
+            set: function(val) { //obj对象中的值发生变化的时候就会触发set事件
+                document.getElementById('uname').innerText = val;
+                document.getElementById('USERNAME').value = val;
+            }
+        })
+        document.getElementById('USERNAME').addEventListener('keyup', function(e) {
+            obj.username = e.target.value
+        })
+    </script>
+</body>
+
+</html>
