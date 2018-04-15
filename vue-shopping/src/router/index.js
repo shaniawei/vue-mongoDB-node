@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import father from '@/components/father'
+import home from '@/components/home'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
         path: '/',
-        name: 'father',
-        component: father
+        name: 'home',
+        component: home
     }]
 })
