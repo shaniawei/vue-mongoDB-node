@@ -81,3 +81,25 @@ vue 是一个MVC框架：数据驱动、状态管理、组件化
 代码演示在 **父子组件通信demo代码演示-src** 目录下
 
 复杂的通信 建议使用 **`vue-x`**
+
+#### vue-router路由
+
+- 动态路由
+- 嵌套路由
+- 编程式路由
+- 命名路由和命名视图
+
+代码演示在 **动态、嵌套、编程式、命名路由代码演示-src** 目录下
+
+#### vue-resource发送请求
+
+- get请求
+- post请求
+- jsonp请求
+- 全局拦截器
+
+代码演示在 **vue-resource代码演示 -src** 目录下
+
+[参考学习链接](https://www.cnblogs.com/chenhuichao/p/8308993.html)
+
+#### axios
