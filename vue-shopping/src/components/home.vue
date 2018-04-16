@@ -17,7 +17,7 @@
             }
         },
         http:{ //设置api的统一域名
-            root:'http://localhost:8080/static/'
+            root:'http://localhost:8081/static/'
         },
         methods: {
             get () {
@@ -30,7 +30,7 @@
                     }
                 }).then((res) => {
                     //响应成功后
-                    this.msg=res
+                    this.msg=res.body
                 },(res) => {
                     //响应失败后
                     console.log('失败')
@@ -39,31 +39,26 @@
             },
             post () {
                 this.$http.post('http://127.0.0.1:3002/save',{
-                    // user:'mm'
+                    user:'mm'
                 },{
                     headers:{
-                        // posttoken:'efg'
+                        posttoken:'efg',
                     }
                 }).then((res) => {
                     //响应成功后
-                    this.msg=res.data
+                    this.msg=res.body
                 },(res) => {
                     console.log('失败')
                     //响应失败后
-                    this.msg=resv
+                    this.msg=res
                 })
             },
             jsonp () {
                 this.$http.jsonp('http://127.0.0.1:3002/person').then((res) => {
-                    //响应成功v后
-                    // thisv.msg=resv
-                    console.log('成功')
-                    console.log(res)
+                    this.msg=res.body
                 },(res) => {
                     //响应失败后
-                    console.log('失败')
-                    console.log(res)
-                    // this.msg=res
+                    this.msg=res
                 })
             },
             http () {
@@ -82,10 +77,10 @@
                     }
                 }).then((res) => {
                     //响应成功后
-                    this.msg = res.data
+                    this.msg = res.body
                 },(res) => {
                     //响应失败后
-                    this.msg=res.data
+                    this.msg=res
                 })
             }
         }
