@@ -70,7 +70,7 @@ vue 是一个MVC框架：数据驱动、状态管理、组件化
 - 适用于大型应用
 - 支持web与原生app开发
 
-
+> 所有的代码演示目录名有src的均可将整个目录重命名为src替换vue-shopping下的src，然后再vue-shopping目录下 运行 **`npm start`**
 
 #### 父子组件通信
 
@@ -98,7 +98,8 @@ vue 是一个MVC框架：数据驱动、状态管理、组件化
 - jsonp请求
 - 全局拦截器
 
-代码演示在 **vue-resource代码演示 -src** 目录下
+代码演示在 **vue-resource代码演示 -src** 目录下 
+搭建了一个简单的node服务，运行时请先在**vue-shopping**目录下运行 `node server`
 
 [参考学习链接](https://www.cnblogs.com/chenhuichao/p/8308993.html)
 
